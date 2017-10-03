@@ -1,0 +1,5 @@
+alias vu='vagrant up'
+alias vs='vagrant ssh'
+alias vh='vagrant halt'
+alias vp='vagrant provision'
+alias vr='vagrant reload'
