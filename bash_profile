@@ -14,8 +14,16 @@ export JAVA_HOME=/Library/Java/Home
 #export SCALA_HOME=/usr/local/bin/scala
 
 export EDITOR='subl -w'
+export UBER_HOME=~/uber
+
+# mich settings
+#ulimit -n 20000
+
 
 #. ~/.local.sh
+# gradlew
+alias bs='gradle shadowJar'
+alias b='gradle fatJar'
 
 alias u='ussh'
 alias s='subl'
@@ -28,6 +36,7 @@ function mt(){
 }
 
 alias sjc='ssh hadoopgw01-sjc1'
+alias ad='ssh adhoc04-sjc1'
 
 # general copy, default to spark
 #copy from gateway
@@ -44,6 +53,7 @@ cps() {
 	cptg hadoopgw01-sjc1 $1 $2
 }
 alias cpm='cps /Users/qian/Uber/michelangelo/core/target/michelangelo_core-0.4-SNAPSHOT.jar bin'
+alias cpa='cps /Users/qian/src/aerosolve/demo/income_prediction/build/libs/income_prediction-1.0.0-all.jar bin'
 
 # copy from sjc to local
 cpsl() {
@@ -68,9 +78,13 @@ source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 # added by Anaconda3 5.0.0 installer
 export PATH="/Users/qian/anaconda3/bin:$PATH"
 
-# mich settings
-ulimit -n 20000
+
 alias a='arc diff'
+alias pg='ps ax | grep '
+#alias nport='netstat -ap tcp | grep -i "listen"'
+pyv(){
+  pip show $1 | grep Version 
+}
 
 alias al='arc land'
 
