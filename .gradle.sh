@@ -1,3 +1,4 @@
+# this i gradle
 #init gradle java project
 alias gij='gradle init --type java-library'
 

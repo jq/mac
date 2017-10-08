@@ -76,7 +76,6 @@ export PATH="/anaconda/bin:$PATH"
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
 
-
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 # added by Anaconda3 5.0.0 installer
