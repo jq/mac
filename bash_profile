@@ -28,7 +28,7 @@ export PATH="$PATH:$GOPATH/bin"
 alias bs='gradle shadowJar'
 alias b='gradle fatJar'
 
-alias u='ussh'
+alias k='ussh'
 alias s='subl'
 
 alias sl='mvn scalastyle:check'
@@ -75,6 +75,7 @@ export PATH="/anaconda/bin:$PATH"
 
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
+source ~/etc/mac/.go.sh 
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
@@ -157,5 +158,6 @@ tp() {
 alias tpj='tp handlers/thrift/test_hive_schema_handler.py::test_get_hive_table_schema_response -s'
 # start rest in laptop
 alias rest='make lserve'
+alias t='make test'
 
 source /usr/local/opt/autoenv/activate.sh
