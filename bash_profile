@@ -16,6 +16,9 @@ export JAVA_HOME=/Library/Java/Home
 export EDITOR='subl -w'
 export UBER_HOME=~/uber
 
+export GOPATH=$HOME/gocode
+export PATH="$PATH:$GOPATH/bin"
+
 # mich settings
 #ulimit -n 20000
 
@@ -71,6 +74,7 @@ export PIP_REQUIRE_VIRTUALENV=false
 export PATH="/anaconda/bin:$PATH"
 
 source ~/etc/mac/git.sh 
+source ~/etc/mac/linux.sh 
 
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
@@ -145,3 +149,14 @@ disconnect-athena() {
 alias rb='. ~/.zshrc'
 # run this before connect to spark UI 
 #connect-proxy
+
+# $2 use -s to print log to console
+tp() {
+  CLAY_CONFIG=config/test.yaml py.test tests/$1 $2
+}
+# test janus
+alias tpj='tp handlers/thrift/test_hive_schema_handler.py::test_get_hive_table_schema_response -s'
+# start rest in laptop
+alias rest='make lserve'
+
+source /usr/local/opt/autoenv/activate.sh

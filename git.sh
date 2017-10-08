@@ -1,5 +1,16 @@
 
+
+# put last commit into working tree keep the changes in your working tree but not on the index
+# need git add .
+alias grh='git reset HEAD~'
+
+# undo the last commit, but the file changes will stay in your working tree. 
+# Also the changes will stay on your index, dont' need git add .
 alias grt='git reset --soft HEAD~1'
+
+# clean current working tree
+alias grhd='git reset --hard'
+
 alias gb='git branch'
 alias gr='git pull --rebase'
 alias grm='git rebase master'
@@ -7,10 +18,6 @@ alias gitc='git branch --merged master | grep -v 'master$' | xargs git branch -d
 alias gp='git push'
 #eval "$(hub alias -s)"
 
-# put last commit into working tree
-alias grh='git reset HEAD~'
-# clean current working tree
-alias grhd='git reset --hard'
 
 function tag {
   git tag -a "$1"
@@ -50,7 +57,7 @@ gd() {
 	git branch -D $1
 }
 gc(){
-	git checkout $1
+	git clone $1
 	
 }
 alias gs='git stash'
