@@ -12,7 +12,8 @@ export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Hom
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 export JAVA_HOME=/Library/Java/Home
 #export SCALA_HOME=/usr/local/bin/scala
-
+# for go test for uber_timeseries_go
+export LIBRARY_PATH=/usr/local/lib/gcc/7
 export EDITOR='subl -w'
 export UBER_HOME=~/uber
 
@@ -28,7 +29,8 @@ export PATH="$PATH:$GOPATH/bin"
 alias bs='gradle shadowJar'
 alias b='gradle fatJar'
 
-alias k='ussh'
+# regen ssh key
+alias h='ussh'
 alias s='subl'
 
 alias sl='mvn scalastyle:check'
