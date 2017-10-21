@@ -26,6 +26,8 @@ alias gph='git push'
 
 alias gtag='git push origin --tags'
 alias gl='git log -S'
+alias gsc='git submodule foreach "git checkout master; git pull"'
+
 # You can also supply a path to only search commits that affected that path.
 # Here, we find out who added the line "verify :method => [:put, :post], :only => [:create]" to UsersController
 # git log -p -G'verify.*put.*create' app/controllers/users_controller.rb
