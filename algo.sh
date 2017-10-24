@@ -1,0 +1,1 @@
+alias rt='algo runlocal -D '

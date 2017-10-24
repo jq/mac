@@ -1,0 +1,1 @@
+alias sac='source env/bin/activate'

@@ -73,16 +73,20 @@ cpsl() {
 export PIP_REQUIRE_VIRTUALENV=false
 
 # added by Anaconda3 4.4.0 installer
-export PATH="/anaconda/bin:$PATH"
+# export PATH="/anaconda/bin:$PATH"
 
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
 source ~/etc/mac/.go.sh 
+source ~/etc/mac/algo.sh 
+source ~/etc/mac/py.sh 
+
+
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 # added by Anaconda3 5.0.0 installer
-export PATH="/Users/qian/anaconda3/bin:$PATH"
+# export PATH="/Users/qian/anaconda3/bin:$PATH"
 
 
 alias a='arc diff'
