@@ -1,4 +1,6 @@
-# this i gradle
+alias bs='gradle shadowJar'
+alias b='gradle fatJar'
+
 #init gradle java project
 alias gij='gradle init --type java-library'
 

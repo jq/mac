@@ -15,3 +15,6 @@ alias goth='make thriftc'
 alias goin='go-build/glide install'
 alias gobin='make bins'
 alias ml='make lint'
+
+alias got='go test -run ' 
+alias rtu='./scripts/dev/dev_tunnels.sh'

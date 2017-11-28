@@ -1,4 +1,5 @@
-
+# Remove a file from a Git repository without deleting it from the local filesystem
+alias gk='git rm --cached '
 
 # put last commit into working tree keep the changes in your working tree but not on the index
 # need git add .

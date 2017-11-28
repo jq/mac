@@ -1,6 +1,9 @@
 brew analytics off 2>&1 >/dev/null
 
-export PATH=/usr/local/opt/python/libexec/bin:/Users/qian/.nvm/v0.10.32/bin:/Users/qian/.rbenv/shims:/Users/qian/bin:/Users/qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/qian/gocode/bin:/Users/qian/gocode/bin
+export PATH=/usr/local/opt/python/libexec/bin:./:/Users/qian/.nvm/v0.10.32/bin:/Users/qian/.rbenv/shims:/Users/qian/bin:/Users/qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/qian/gocode/bin:/Users/qian/gocode/bin
+
+# uber
+PATH=$PATH:~/.opus/bin
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
@@ -25,9 +28,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 
 #. ~/.local.sh
-# gradlew
-alias bs='gradle shadowJar'
-alias b='gradle fatJar'
 
 # regen ssh key
 alias h='ussh'
@@ -71,7 +71,7 @@ source ~/etc/mac/linux.sh
 source ~/etc/mac/.go.sh 
 source ~/etc/mac/algo.sh 
 source ~/etc/mac/py.sh 
-
+source ~/etc/mac/.gradle.sh
 
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
@@ -143,11 +143,5 @@ disconnect-athena() {
 alias rb='. ~/.zshrc'
 # run this before connect to spark UI 
 #connect-proxy
-
-# test janus
-alias tpj='tp handlers/thrift/test_hive_schema_handler.py::test_get_hive_table_schema_response -s'
-# start rest in laptop
-alias rest='make lserve'
-alias t='make test'
 
 source /usr/local/opt/autoenv/activate.sh
