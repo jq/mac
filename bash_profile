@@ -1,6 +1,6 @@
 brew analytics off 2>&1 >/dev/null
 
-export PATH=/usr/local/opt/python/libexec/bin:./:/Users/qian/.nvm/v0.10.32/bin:/Users/qian/.rbenv/shims:/Users/qian/bin:/Users/qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/qian/gocode/bin:/Users/qian/gocode/bin
+export PATH=/usr/local/opt/python/libexec/bin:.:/Users/qian/.nvm/v0.10.32/bin:/Users/qian/.rbenv/shims:/Users/qian/bin:/Users/qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/qian/gocode/bin:/Users/qian/gocode/bin
 
 # uber
 PATH=$PATH:~/.opus/bin
@@ -72,7 +72,7 @@ source ~/etc/mac/.go.sh
 source ~/etc/mac/algo.sh 
 source ~/etc/mac/py.sh 
 source ~/etc/mac/.gradle.sh
-
+source ~/etc/mac/kube.sh
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 

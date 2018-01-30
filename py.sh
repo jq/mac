@@ -2,6 +2,7 @@
 alias p3e='python3.6 -m venv env'
 alias p22='source env/bin/activate'
 alias sac='≈'
+alias pir='pip install -r requirements.txt'
 # for rest project to instal pkg
 alias mbs='make bootstrap'
 # for algorithmic so that algo serve can run, set to export LANGUAGE_VERSION=python3 in case
