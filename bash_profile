@@ -1,7 +1,6 @@
 brew analytics off 2>&1 >/dev/null
 
-export PATH=/usr/local/opt/python/libexec/bin:.:/Users/qian/.nvm/v0.10.32/bin:/Users/qian/.rbenv/shims:/Users/qian/bin:/Users/qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/qian/gocode/bin:/Users/qian/gocode/bin
-
+export PATH=/usr/local/opt/python/libexec/bin:.:/Users/j.qian/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki
 # uber
 PATH=$PATH:~/.opus/bin
 
@@ -57,8 +56,6 @@ cptg() {
 cps() {
 	cptg hadoopgw01-sjc1 $1 $2
 }
-alias cpm='cps /Users/qian/Uber/michelangelo/core/target/michelangelo_core-0.4-SNAPSHOT.jar bin'
-alias cpa='cps /Users/qian/src/aerosolve/demo/income_prediction/build/libs/income_prediction-1.0.0-all.jar bin'
 
 # copy from sjc to local
 cpsl() {
@@ -144,4 +141,5 @@ alias rb='. ~/.zshrc'
 # run this before connect to spark UI 
 #connect-proxy
 
-source /usr/local/opt/autoenv/activate.sh
+# ignore autoenv for now
+#source /usr/local/opt/autoenv/activate.sh

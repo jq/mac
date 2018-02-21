@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/qian/.oh-my-zsh
+export ZSH=/Users/j.qian/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(git, tmux zsh-syntax-highlighting)
+plugins=(git, zsh-syntax-highlighting)
 
 # User configuration
 
