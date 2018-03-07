@@ -71,6 +71,7 @@ source ~/etc/mac/algo.sh
 source ~/etc/mac/py.sh 
 source ~/etc/mac/.gradle.sh
 source ~/etc/mac/kube.sh
+source ~/etc/mac/ant.sh
 
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
