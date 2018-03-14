@@ -1,9 +1,8 @@
 brew analytics off 2>&1 >/dev/null
 export HOMEBREW_BREWFILE=~/etc/ubrewfile/Brewfile
 
-export PATH=/usr/local/opt/python/libexec/bin:.:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki
-# uber
-PATH=$PATH:~/.opus/bin
+export PATH=/usr/local/opt/python/libexec/bin:.:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
@@ -21,7 +20,7 @@ export EDITOR='subl -w'
 export UBER_HOME=~/uber
 
 export GOPATH=$HOME/gocode
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$GOPATH/bin:$PATH"
 
 # mich settings
 #ulimit -n 20000
