@@ -25,6 +25,9 @@ export PATH="$GOPATH/bin:$PATH"
 # mich settings
 #ulimit -n 20000
 
+# for xgboost
+export CC=gcc-5
+export CXX=g++-5
 
 #. ~/.local.sh
 

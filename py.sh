@@ -1,8 +1,20 @@
+# for local error
+#export LC_ALL=en_US.UTF-8  
+#export LANG=en_US.UTF-8
+export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.0/libexec
+
+#http://docs.python-guide.org/en/latest/dev/virtualenvs/
+alias p3='pip3 install'
+alias pv='virtualenv env'
+alias plib='pip freeze > requirements.txt'
+#install your project in development mode
+alias pins='pip install -e .'
 # python3 create env
 alias p3e='python3.6 -m venv env'
-alias p22='source env/bin/activate'
+alias pa='source env/bin/activate'
+alias da='deactivate'
 alias sac='≈'
-alias pir='pip install -r requirements.txt'
+alias pir='pip3 install -r requirements.txt'
 # for rest project to instal pkg
 alias mbs='make bootstrap'
 # for algorithmic so that algo serve can run, set to export LANGUAGE_VERSION=python3 in case
