@@ -69,7 +69,7 @@ cpsl() {
   rsync  -avzh $USER@hadoopgw01-sjc1:~/$1 $2
 }
 
-
+source ~/etc/mac/.mvn.sh 
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
 source ~/etc/mac/.go.sh 
