@@ -22,6 +22,10 @@ export UBER_HOME=~/uber
 export GOPATH=$HOME/gocode
 export PATH="$GOPATH/bin:$PATH"
 
+# for fix python ascii' codec can't encode character
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
 # mich settings
 #ulimit -n 20000
 

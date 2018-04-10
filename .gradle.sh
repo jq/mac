@@ -12,6 +12,7 @@ alias gai='gradlew assemble idea'
 alias gbu='gradlew bintrayUpload'
            
 alias gclean='gradlew clean'
+
 #zsh intercept **, so use \*
 gtt () {
     if [ $# -eq 0 ]
