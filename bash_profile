@@ -75,6 +75,7 @@ source ~/etc/mac/.gradle.sh
 source ~/etc/mac/kube.sh
 source ~/etc/mac/ant.sh
 
+# install z if hits error
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 # added by Anaconda3 5.0.0 installer
