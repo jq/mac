@@ -17,12 +17,12 @@ alias gr='git pull --rebase'
 alias gc='git clone'
 
 alias gs='git stash'
-alias gp='git stash pop'
+alias gsp='git stash pop'
 # add tag
 alias tag='git tag -a'
 # alias grm='git rebase master'
 # alias gitc='git branch --merged master | grep -v 'master$' | xargs git branch -d'
-alias gph='git push'
+alias gp='git push'
 #eval "$(hub alias -s)"
 
 alias gtag='git push origin --tags'
