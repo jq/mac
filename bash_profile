@@ -41,6 +41,8 @@ alias s='subl'
 
 alias sl='mvn scalastyle:check'
 
+alias bi='brew install '
+
 # test
 function mt(){
   mvn -DwildcardSuites=\*$1\* test
