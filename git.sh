@@ -53,4 +53,7 @@ gn() {
 	git pull --rebase
 }
 
+gpo() {
+	git push origin ${1:-jq}
+}
 
