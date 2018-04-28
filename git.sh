@@ -49,7 +49,7 @@ ga(){
 }
 
 gn() {
-	git checkout -t origin/${1:-master} -b $2
+	git checkout -t origin/${2:-master} -b $1
 	git pull --rebase
 }
 
