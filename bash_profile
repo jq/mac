@@ -86,7 +86,7 @@ source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 # export PATH="/Users/qian/anaconda3/bin:$PATH"
 
 
-ƒalias pg='ps ax | grep '
+alias pg='ps ax | grep '
 #alias nport='netstat -ap tcp | grep -i "listen"'
 
 
