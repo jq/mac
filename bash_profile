@@ -48,9 +48,6 @@ function mt(){
   mvn -DwildcardSuites=\*$1\* test
 }
 
-alias sjc='ssh hadoopgw01-sjc1'
-alias ad='ssh adhoc04-sjc1'
-
 # general copy, default to spark
 #copy from gateway
 cpfg() {
@@ -88,11 +85,9 @@ source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 # export PATH="/Users/qian/anaconda3/bin:$PATH"
 
 
-alias a='arc diff'
-alias pg='ps ax | grep '
+ƒalias pg='ps ax | grep '
 #alias nport='netstat -ap tcp | grep -i "listen"'
 
-alias al='arc land'
 
 # Add this to your .bash_profile to enable command-line setup of the athena connection proxy
 # Created by @sdh 6/9/2016
