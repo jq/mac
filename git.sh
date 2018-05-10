@@ -14,7 +14,9 @@ alias grhd='git reset --hard'
 
 alias gb='git branch'
 alias gr='git pull --rebase'
-alias gc='git clone'
+alias gcl='git clone'
+
+alias gc='git checkout'
 
 alias gs='git stash'
 alias gsp='git stash pop'
