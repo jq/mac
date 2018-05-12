@@ -1,6 +1,7 @@
 # for local error
 #export LC_ALL=en_US.UTF-8  
 #export LANG=en_US.UTF-8
+# if you have two versions of spark comment out SPARK_HOME
 #export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.0/libexec
 
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
