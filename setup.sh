@@ -1,7 +1,7 @@
 # setup shell dev env
 mkdir etc
 cd etc
-git clone git@git.musta.ch:julian-qian/mac.git
+git clone git@github.com:jq/mac.git
 
 DEVHOME=~/etc/mac
 

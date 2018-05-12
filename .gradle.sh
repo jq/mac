@@ -13,6 +13,9 @@ alias gbu='gradlew bintrayUpload'
            
 alias gclean='gradlew clean'
 
+alias gi='gradlew install'
+
+
 #zsh intercept **, so use \*
 gtt () {
     if [ $# -eq 0 ]

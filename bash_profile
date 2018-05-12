@@ -71,8 +71,8 @@ cpsl() {
 source ~/etc/mac/.mvn.sh 
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
-source ~/etc/mac/.go.sh 
-source ~/etc/mac/algo.sh 
+#source ~/etc/mac/.go.sh 
+#source ~/etc/mac/algo.sh 
 source ~/etc/mac/py.sh 
 source ~/etc/mac/.gradle.sh
 source ~/etc/mac/kube.sh
@@ -83,7 +83,7 @@ source ~/etc/mac/ak.sh
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 # added by Anaconda3 5.0.0 installer
-# export PATH="/Users/qian/anaconda3/bin:$PATH"
+# export PATH="~/anaconda3/bin:$PATH"
 
 
 alias pg='ps ax | grep '
