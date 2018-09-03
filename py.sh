@@ -27,7 +27,10 @@ alias tunnel='./scripts/dev/dev_tunnels.sh'
 # start rest in laptop need to open tunnel before it, and before open tunnel, you need to connect vpn
 alias rest='make lserve'
 alias t='make test'
-alias ve='virtualenv'
+
+# del all python pyc cache, used when you move python root folder
+alias pydc="find . -name '*.pyc' -delete"
+
 export LANGUAGE_VERSION=python2
 
 # require by http://click.pocoo.org/5/python3/
@@ -57,5 +60,11 @@ tp() {
 pyenv () {
 	echo "echo 'whoa'" > $1/.env
 	cd $1
+}
+
+# $2 -k for perticular method ""
+# python -m pytest -s tests/pyspark_xgboost/test_udf.py  -k test_udf
+ptest() {
+	python -m pytest -s tests/$1 $2 $3
 }
 

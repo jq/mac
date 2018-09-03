@@ -27,6 +27,8 @@ alias tag='git tag -a'
 alias gp='git push'
 #eval "$(hub alias -s)"
 
+#git remove file from repo but not locally
+alias grc='git rm --cached -r '
 alias gtag='git push origin --tags'
 alias gl='git log -S'
 alias gsc='git submodule foreach "git checkout master; git pull"'
