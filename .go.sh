@@ -2,7 +2,7 @@ alias grg='go run main.go'
 alias gor='go run '
 
 alias gob='go build && '
-ß
+
 alias ssql='brew services start mysql'
 alias stsql='brew services stop mysql'
 
