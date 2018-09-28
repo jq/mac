@@ -19,7 +19,7 @@ export LIBRARY_PATH=/usr/local/lib/gcc/7
 export EDITOR='subl -w'
 export UBER_HOME=~/uber
 
-export GOPATH=$HOME/gocode
+export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
 # for fix python ascii' codec can't encode character
