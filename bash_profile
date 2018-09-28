@@ -71,7 +71,7 @@ cpsl() {
 source ~/etc/mac/.mvn.sh 
 source ~/etc/mac/git.sh 
 source ~/etc/mac/linux.sh 
-#source ~/etc/mac/.go.sh 
+source ~/etc/mac/.go.sh 
 #source ~/etc/mac/algo.sh 
 source ~/etc/mac/py.sh 
 source ~/etc/mac/.gradle.sh
