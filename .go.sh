@@ -13,3 +13,5 @@ alias ml='make lint'
 
 alias got='go test -run ' 
 alias rtu='./scripts/dev/dev_tunnels.sh'
+
+alias depi='dep ensure -v'
