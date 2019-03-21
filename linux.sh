@@ -3,3 +3,6 @@ alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show 
 alias ls='ls -lG' # colors + always use the long format
 
 alias pss='ps -ef | grep '
+
+# find string under current path
+alias se='grep -rnw . -e '

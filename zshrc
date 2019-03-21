@@ -87,3 +87,4 @@ source $ZSH/oh-my-zsh.sh
 #source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 #. `brew --prefix`/etc/profile.d/z.sh
 #export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+if [ /Users/j.qian/bin/kubectl ]; then source <(kubectl completion zsh); fi

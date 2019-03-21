@@ -32,6 +32,14 @@ alias grc='git rm --cached -r '
 alias gtag='git push origin --tags'
 alias gl='git log -S'
 alias gsc='git submodule foreach "git checkout master; git pull"'
+alias gra='git remote add upstream '
+
+# syn with upstream
+gsu() { 
+git fetch upstream
+git checkout master
+git merge upstream/master
+}
 
 # You can also supply a path to only search commits that affected that path.
 # Here, we find out who added the line "verify :method => [:put, :post], :only => [:create]" to UsersController
