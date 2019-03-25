@@ -16,5 +16,5 @@ alias rtu='./scripts/dev/dev_tunnels.sh'
 
 # ensure dependency
 alias depi='dep ensure -v'
-
+alias depc='dep check'
 alias depa='dep ensure -add '

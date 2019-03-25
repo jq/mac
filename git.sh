@@ -65,6 +65,13 @@ gn() {
 	git pull --rebase
 }
 
+# link with upstream current master, so that git pull --rebase syn with current master
+# and git push origin $1 to update to your own git repo
+gnu() {
+	git checkout -t upstream/${2:-master} -b $1
+	git pull --rebase
+}
+
 gpo() {
 	git push origin ${1:-jq}
 }
