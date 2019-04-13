@@ -31,6 +31,9 @@ alias t='make test'
 # del all python pyc cache, used when you move python root folder
 alias pydc="find . -name '*.pyc' -delete"
 
+# use 3 as local for now
+alias pylocal='pyenv local 2.7.14'
+
 export LANGUAGE_VERSION=python2
 
 # require by http://click.pocoo.org/5/python3/

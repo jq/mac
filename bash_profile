@@ -4,9 +4,9 @@ export HOMEBREW_BREWFILE=~/etc/ubrewfile/Brewfile
 export PATH=/usr/local/opt/python/libexec/bin:.:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 
 
-if [ -f $(brew --prefix)/etc/brew-wrap ];then
-  source $(brew --prefix)/etc/brew-wrap
-fi
+#if [ -f $(brew --prefix)/etc/brew-wrap ];then
+#  source $(brew --prefix)/etc/brew-wrap
+#fi
 
 # echo $PATH to print out
 # old setting for golden key export SSH_AUTH_SOCK=$TMPDIR/ssh-agent-$USER.sock
@@ -44,9 +44,9 @@ alias sl='mvn scalastyle:check'
 alias bi='brew install '
 
 # test
-function mt(){
+function mt
   mvn -DwildcardSuites=\*$1\* test
-}
+end
 
 # general copy, default to spark
 #copy from gateway
@@ -78,6 +78,8 @@ source ~/etc/mac/.gradle.sh
 source ~/etc/mac/kube.sh
 source ~/etc/mac/ant.sh
 source ~/etc/mac/ak.sh
+source ~/etc/mac/vagrant.sh
+source ~/etc/mac/ant.sh
 
 # install z if hits error
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
@@ -90,60 +92,7 @@ alias pg='ps ax | grep '
 #alias nport='netstat -ap tcp | grep -i "listen"'
 
 
-# Add this to your .bash_profile to enable command-line setup of the athena connection proxy
-# Created by @sdh 6/9/2016
-
-connect-proxy() {
-  bastion_connections=$(ps aux | grep -c 'ssh -fCND 8001 bastion01-sjc1.prod.uber.com')
-  if [[ $bastion_connections -lt 2 ]] ; then 
-      ssh -fCND 8001 bastion01-sjc1.prod.uber.com
-  else
-      echo "Already connected to bastion01-sjc1"
-  fi
-}
-
-connect-athena() {
-  # Start tunnel
-  connect-proxy
-
-  # Configure socks proxy
-  socksproxy_config=$(networksetup -getsocksfirewallproxy "Wi-Fi")
-  proxy_enabled=$(echo $socksproxy_config | grep -c "Enabled: yes")
-  proxy_configured=$(echo $socksproxy_config | grep -c "Server: localhost")
-  if [[ $proxy_configured -eq 0 ]] ; then
-    echo "Need to configure firewall server"
-    networksetup -setsocksfirewallproxy "Wi-Fi" localhost 8001
-  else
-    echo "Firewall server already configured"
-  fi
-  
-  bypass_domains=$(networksetup -getproxybypassdomains "Wi-Fi")
-  bypass_domains_configured=$(echo $bypass_domains | grep -E "\*\.local" | grep -cE "169\.254/16")
-
-  if [[ $bypass_domains_configured -eq 0 ]] ; then 
-    # Set bypass domains
-    echo "Need to configure bypass domains"
-    networksetup -setproxybypassdomains "Wi-Fi" *.local 169.254/16
-  else
-    echo "Bypass domains already configured"
-  fi
-
-  if [[ $proxy_enabled -eq 0 ]] ; then 
-    # Enable proxy
-    echo "Need to enable proxy"
-    networksetup -setsocksfirewallproxystate "Wi-Fi" on
-  else
-    echo "Proxy already enabled"
-  fi
-}
-
-disconnect-athena() {
-  # Disable proxy
-  networksetup -setsocksfirewallproxystate "Wi-Fi" off
-  # Kill running SSH tunnel, if one exists
-  pkill -f "ssh -fCND 8001 bastion01-sjc1.prod.uber.com"
-}
-
+ 
 alias rb='. ~/.zshrc'
 # run this before connect to spark UI 
 #connect-proxy
