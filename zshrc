@@ -50,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(git, zsh-syntax-highlighting)
+plugins=(git, zsh-syntax-highlighting, zsh-autosuggestions)
 
 # User configuration
 
@@ -87,4 +87,5 @@ source $ZSH/oh-my-zsh.sh
 #source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 #. `brew --prefix`/etc/profile.d/z.sh
 #export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+
 if [ /Users/j.qian/bin/kubectl ]; then source <(kubectl completion zsh); fi
