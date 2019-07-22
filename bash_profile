@@ -82,37 +82,15 @@ source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 # added by Anaconda3 5.0.0 installer
 # export PATH="~/anaconda3/bin:$PATH"
 
-
 alias pg='ps ax | grep '
 #alias nport='netstat -ap tcp | grep -i "listen"'
 
-
- 
 alias rb='. ~/.zshrc'
 # run this before connect to spark UI 
 #connect-proxy
 
 # for conda and pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH“
+export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-# ignore autoenv for now
-#source /usr/local/opt/autoenv/activate.sh
-# added by Miniconda3 4.5.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/j.qian/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    \eval "$__conda_setup"
-#else
-#    if [ -f "/Users/j.qian/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/j.qian/miniconda3/etc/profile.d/conda.sh"
-#        CONDA_CHANGEPS1=false conda activate base
-#    else
-#        \export PATH="/Users/j.qian/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda init <<<
