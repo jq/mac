@@ -37,7 +37,7 @@ export CXX=g++-5
 
 # regen ssh key
 alias h='ussh'
-alias s='subl'
+alias s='sublime'
 
 alias sl='mvn scalastyle:check'
 

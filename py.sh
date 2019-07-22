@@ -58,13 +58,6 @@ tp() {
   CLAY_CONFIG=config/test.yaml py.test tests/$1 $2
 }
 
-# create python auto env
-# I think the whoa should be change to activate 
-pyenv () {
-	echo "echo 'whoa'" > $1/.env
-	cd $1
-}
-
 # $2 -k for perticular method ""
 # python -m pytest -s tests/pyspark_xgboost/test_udf.py  -k test_udf
 ptest() {
