@@ -24,9 +24,9 @@ alias gsp='git stash pop'
 alias tag='git tag -a'
 # alias grm='git rebase master'
 # alias gitc='git branch --merged master | grep -v 'master$' | xargs git branch -d'
-alias gp='git push'
+alias gp='git push origin HEAD --force'
 #eval "$(hub alias -s)"
-
+# git rebase -i HEAD~2
 #git remove file from repo but not locally
 alias grc='git rm --cached -r '
 alias gtag='git push origin --tags'
@@ -50,7 +50,7 @@ git merge upstream/master
 gcm() {
 	git add .
 	git commit -m ${1:-'"update"'}
-	git push
+        git push origin HEAD
 }
 
 # git add all and push

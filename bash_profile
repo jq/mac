@@ -1,5 +1,9 @@
-brew analytics off 2>&1 >/dev/null
-export HOMEBREW_BREWFILE=~/etc/ubrewfile/Brewfile
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(_SNAPC_COMPLETE=source_zsh snapc)"
+
+#brew analytics off 2>&1 >/dev/null
+#export HOMEBREW_BREWFILE=~/etc/ubrewfile/Brewfile
 
 export PATH=/usr/local/opt/python/libexec/bin:.:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 
@@ -37,7 +41,7 @@ export CXX=g++-5
 
 # regen ssh key
 alias h='ussh'
-alias s='subl'
+
 
 alias sl='mvn scalastyle:check'
 
