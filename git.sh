@@ -17,8 +17,8 @@ alias gr='git pull --rebase'
 alias gcl='git clone'
 
 alias gc='git checkout'
-
-alias gs='git stash'
+alias gs='git status'
+alias gss='git stash'
 alias gsp='git stash pop'
 # add tag
 alias tag='git tag -a'
@@ -34,6 +34,12 @@ alias gl='git log -S'
 alias gsc='git submodule foreach "git checkout master; git pull"'
 alias gra='git remote add upstream '
 
+# git checkout unmerged file
+gcu() {
+	git reset ${1}
+	git checkout ${1}
+}
+
 # syn with upstream
 gsu() { 
 git fetch upstream
@@ -48,16 +54,18 @@ git merge upstream/master
 
 # `git add -p` to add little changes one at a time.
 gcm() {
+	./cicd/type_analysis.py
 	git add .
 	git commit -m ${1:-'"update"'}
-        git push origin HEAD
+    git push --no-verify -f origin HEAD
 }
 
 # git add all and push
 ga(){
+	./cicd/type_analysis.py
 	git add .
 	git commit --amend --no-edit
-	git push --force
+	git push --no-verify -f origin HEAD
 }
 
 gn() {
