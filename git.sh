@@ -34,6 +34,12 @@ alias gl='git log -S'
 alias gsc='git submodule foreach "git checkout master; git pull"'
 alias gra='git remote add upstream '
 
+# git checkout unmerged file
+gcu() {
+	git reset ${1}
+	git checkout ${1}
+}
+
 # syn with upstream
 gsu() { 
 git fetch upstream
@@ -50,7 +56,7 @@ git merge upstream/master
 gcm() {
 	git add .
 	git commit -m ${1:-'"update"'}
-        git push origin HEAD
+    git push origin HEAD
 }
 
 # git add all and push
