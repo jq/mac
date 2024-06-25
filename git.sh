@@ -34,6 +34,7 @@ alias gl='git log -S'
 alias gsc='git submodule foreach "git checkout master; git pull"'
 alias gra='git remote add upstream '
 
+# git fetch origin merlin:refs/remotes/origin/merlin
 # git checkout unmerged file
 gcu() {
 	git reset ${1}
@@ -46,7 +47,12 @@ git fetch upstream
 git checkout master
 git merge upstream/master
 }
-
+gsr(){
+git checkout unittest
+git branch -D ${1:-merlin}
+git snap fetch origin ${1:-merlin}:${1:-merlin}
+ git checkout ${1:-merlin}
+}
 # You can also supply a path to only search commits that affected that path.
 # Here, we find out who added the line "verify :method => [:put, :post], :only => [:create]" to UsersController
 # git log -p -G'verify.*put.*create' app/controllers/users_controller.rb
@@ -54,7 +60,7 @@ git merge upstream/master
 
 # `git add -p` to add little changes one at a time.
 gcm() {
-	./cicd/type_analysis.py
+	#./cicd/type_analysis.py
 	git add .
 	git commit -m ${1:-'"update"'}
     git push --no-verify -f origin HEAD
@@ -62,7 +68,7 @@ gcm() {
 
 # git add all and push
 ga(){
-	./cicd/type_analysis.py
+	#./cicd/type_analysis.py
 	git add .
 	git commit --amend --no-edit
 	git push --no-verify -f origin HEAD
@@ -71,6 +77,11 @@ ga(){
 gn() {
 	git checkout -t origin/${2:-master} -b $1
 	git pull --rebase
+}
+
+gno() {
+	git fetch origin $1
+	git checkout -b $1 origin/$1
 }
 
 # link with upstream current master, so that git pull --rebase syn with current master

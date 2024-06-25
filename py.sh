@@ -8,9 +8,30 @@ export DEFAULT_INSTANCE_NAME="jqian"
 export DEFAULT_INSTANCE_ZONE="us-west1-b"
 export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
 
+# nv
+# nvcc --version  gcc --version
+# docker ps -a 
+# docker images
+# docker start  之后 用 docker exec -it 51501fd0c88c bash
+# docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra nvcr.io/nvidia/tensorflow:24.02-tf2-py3
+# TFRA: 
+
+#docker run --privileged --gpus all -it -v $(pwd):workspace nvcr.io/nvidia/tensorflow:22.09-tf2-py3
+# docker run --gpus all -it -v $(pwd):/workspace/hkv nvcr.io/nvidia/tensorflow:22.09-tf2-py3
+# docker run --gpus all -it -v $(pwd):/workspace/example nvcr.io/nvidia/tensorflow:24.03-tf2-py3
+
+# docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-hugectr:23.12
+
+# docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-hugectr:nightly
+
+# docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-tensorflow:nightly
+
+#  zip -r combined.zip export_dir model_dir
 # tfra
 alias tfrad='docker run --privileged --gpus all -it -v $(pwd):$(pwd) tfra/dev_container:latest-python3.9'
+alias dk='docker stop'
 
+alias cks="find . -name '*.py' -print0 | xargs -0 yapf --style=./.yapf -ir"
 
 # mac python
 alias cle='conda env list'
@@ -48,12 +69,19 @@ alias t='make test'
 
 # del all python pyc cache, used when you move python root folder
 alias pydc="find . -name '*.pyc' -delete"
-
+alias pyt='pytest -s --genuine-v2-mode'
 # require by http://click.pocoo.org/5/python3/
 # comment out due to python unicode error
 #export LC_ALL=C.UTF-8
 #export LANG=C.UTF-8
 
+dl() {
+  curl -L -H 'Authorization: token $1' -o filename.zip $2
+}
+
+de() {
+  docker exec -it $1 bash
+}
 
 gccp() {
     local instance_name=${3:-$DEFAULT_INSTANCE_NAME}  # Use global default instance name
@@ -70,6 +98,12 @@ gccp() {
 
     gcloud compute scp --recurse "$instance_name:$src_dir" "$dest_dir" --zone "$zone"
 }
+
+
+cpgc() {
+  scp -i ~/.ssh/id_ed25519 "$1" jqian2@jqian.snap-ads-debug.snapint:"$2"
+}
+
 
 w1() {
 	gclg
