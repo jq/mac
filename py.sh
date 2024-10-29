@@ -4,6 +4,11 @@
 # if you have two versions of spark comment out SPARK_HOME
 #export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.0/libexec
 
+#open mpi
+#export GOOGLE_APPLICATION_CREDENTIALS=/Users/jqian2/src/infra/go_test_terraform/service-account-key.json
+export CLOUDSDK_PYTHON=/usr/local/Caskroom/miniconda/base/envs/d1/bin/python
+export DYLD_LIBRARY_PATH=/usr/local/opt/open-mpi/lib:$DYLD_LIBRARY_PATH
+
 export DEFAULT_INSTANCE_NAME="jqian"
 export DEFAULT_INSTANCE_ZONE="us-west1-b"
 export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
@@ -14,7 +19,14 @@ export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
 # docker images
 # docker start  之后 用 docker exec -it 51501fd0c88c bash
 # docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra nvcr.io/nvidia/tensorflow:24.02-tf2-py3
-# TFRA: 
+# docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra nvcr.io/nvidia/tensorflow:24.07-tf2-py3
+# need pip install tensorflow-datasets
+# docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra tfra/nosla-cuda12.3-cudnn8.9-ubuntu20.04-manylinux2014-python3.9
+# TFRA:  use local export PYTHONPATH="/Users/jqian2/src/recommenders-addons/:$PYTHONPATH"
+# export PYTHONPATH="${PYTHONPATH}:/workspace/tfra/" 
+# /usr/local/Caskroom/miniconda/base/envs/d1/bin/tensorboard --logdir=gs://zliu6/jq/logs/p1
+# torch
+# docker run --gpus all -it -v $(pwd):/workspace/torch nvcr.io/nvidia/pytorch:24.01-py3
 
 #docker run --privileged --gpus all -it -v $(pwd):workspace nvcr.io/nvidia/tensorflow:22.09-tf2-py3
 # docker run --gpus all -it -v $(pwd):/workspace/hkv nvcr.io/nvidia/tensorflow:22.09-tf2-py3
@@ -27,6 +39,7 @@ export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
 # docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-tensorflow:nightly
 
 #  zip -r combined.zip export_dir model_dir
+# gsutil
 # tfra
 alias tfrad='docker run --privileged --gpus all -it -v $(pwd):$(pwd) tfra/dev_container:latest-python3.9'
 alias dk='docker stop'
@@ -118,6 +131,7 @@ pyv(){
 
 # require by anaconda
 export PIP_REQUIRE_VIRTUALENV=false
+export PATH="/Users/jqian2/go/bin:$PATH"
 
 # added by Anaconda3 4.4.0 installer
 # export PATH="/anaconda/bin:$PATH"

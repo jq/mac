@@ -1,6 +1,5 @@
 # Remove a file from a Git repository without deleting it from the local filesystem
 alias gk='git rm --cached '
-
 # put last commit into working tree keep the changes in your working tree but not on the index
 # need git add .
 alias grh='git reset HEAD~'
@@ -79,6 +78,7 @@ gn() {
 	git pull --rebase
 }
 
+# git vm checkout remote
 gno() {
 	git fetch origin $1
 	git checkout -b $1 origin/$1

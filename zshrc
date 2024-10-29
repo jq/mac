@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=~/app/google-cloud-sdk/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/app/google-cloud-sdk/bin:$HOME/bin:/usr/local/bin:~/go/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
 
