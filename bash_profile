@@ -7,7 +7,7 @@ export OPENAI_API_KEY=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
 #brew analytics off 2>&1 >/dev/null
 #export HOMEBREW_BREWFILE=~/etc/ubrewfile/Brewfile
 
-export PATH=/usr/local/opt/python/libexec/bin:.:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+export PATH=.:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
@@ -19,7 +19,6 @@ fi
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 export JAVA_HOME=/Library/Java/Home
-#export SCALA_HOME=/usr/local/bin/scala
 # for go test for uber_timeseries_go
 export LIBRARY_PATH=/usr/local/lib/gcc/7
 export EDITOR='subl -w'

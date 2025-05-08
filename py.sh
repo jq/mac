@@ -13,11 +13,14 @@ export DEFAULT_INSTANCE_NAME="jqian"
 export DEFAULT_INSTANCE_ZONE="us-west1-b"
 export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
 
+alias python3=$(which python)
 # nv
 # nvcc --version  gcc --version
 # docker ps -a 
 # docker images
 # docker start  之后 用 docker exec -it 51501fd0c88c bash
+# docker run --privileged --gpus all -it -v $(pwd):/workspace/hkv gcr.io/snap-bento-training/recsys-examples:latest
+# docker run --privileged --gpus all -it -v $(pwd):/workspace/hkv nvcr.io/nvidia/pytorch:24.07-py3 
 # docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra nvcr.io/nvidia/tensorflow:24.02-tf2-py3
 # docker run --privileged --gpus all -it -v $(pwd):/workspace/tfra nvcr.io/nvidia/tensorflow:24.07-tf2-py3
 # need pip install tensorflow-datasets
@@ -37,10 +40,14 @@ export FULL_INSTANCE="jqian.snap-ads-debug.snapint"
 # docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-hugectr:nightly
 
 # docker run --gpus all -it -v $(pwd):/workspace/e nvcr.io/nvidia/merlin/merlin-tensorflow:nightly
-
+# docker commit f4b7af85f6c8 hkv3
+# docker tag hkv3 gcr.io/snap-bento-training/recsys-examples:latest
+# docker push gcr.io/snap-bento-training/recsys-examples:latest
 #  zip -r combined.zip export_dir model_dir
 # gsutil
 # tfra
+
+alias k='kubectl'
 alias tfrad='docker run --privileged --gpus all -it -v $(pwd):$(pwd) tfra/dev_container:latest-python3.9'
 alias dk='docker stop'
 
@@ -124,6 +131,12 @@ w1() {
 	scr
   d1
 }
+
+# gb() {
+# git snap pull origin "$1"
+# git checkout FETCH_HEAD
+# git switch -c "$1"
+# } 
 
 pyv(){
   pip show $1 | grep Version 

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=~/app/google-cloud-sdk/bin:$HOME/bin:/usr/local/bin:~/go/bin:$PATH
+export PATH=~/app/google-cloud-sdk/bin:$HOME/bin:~/go/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
 
@@ -83,7 +83,6 @@ plugins=(zsh-autosuggestions)
 
 # User configuration
 
-# export PATH="./:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 #source ~/.bash_profile
 source ~/etc/mac/git.sh
