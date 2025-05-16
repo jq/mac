@@ -43,6 +43,9 @@ alias python3=$(which python)
 # docker commit f4b7af85f6c8 hkv3
 # docker tag hkv3 gcr.io/snap-bento-training/recsys-examples:latest
 # docker push gcr.io/snap-bento-training/recsys-examples:latest
+# docker tag recsys-examples:latest gcr.io/snap-bento-training/recsys-examples:latest
+# docker tag recsys-examples:latest gcr.io/snap-bento-training/recsys-examples:latest
+
 #  zip -r combined.zip export_dir model_dir
 # gsutil
 # tfra
